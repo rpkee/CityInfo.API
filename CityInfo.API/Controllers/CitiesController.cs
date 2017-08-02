@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CityInfo.API.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
  
 namespace CityInfo.API.Controllers
@@ -22,6 +23,12 @@ namespace CityInfo.API.Controllers
             }
 
             return Ok(city);
+        }
+
+        [HttpPost]
+        public IActionResult CreateCity(CityDto city)
+        {
+            return Ok();
         }
     }
 }
